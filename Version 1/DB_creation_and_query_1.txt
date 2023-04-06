@@ -1,3 +1,4 @@
+```
 CREATE TABLE nauczyciele(
 nauczyciel_id INT PRIMARY KEY,
 imie VARCHAR(50) NOT NULL,
@@ -64,13 +65,14 @@ INSERT INTO uczniowie VALUES (16,'Maciej','Maciejewski',TRUE,'2014-02-11',2);
 INSERT INTO uczniowie VALUES (17,'Jakub','Jakubowski',TRUE,'2015-10-21',1);
 INSERT INTO uczniowie VALUES (18,'Irena','Irenka',TRUE,'2015-04-27',1);
 INSERT INTO uczniowie VALUES (19,'Michal','Michalowski',TRUE,'2015-07-26',1);
-
+```
+```
 SELECT u.imie||' '||u.nazwisko AS imie_i_nazwisko_uczniow
 FROM uczniowie AS u
 JOIN klasa AS k ON u.klasa_id=k.klasa_id
 JOIN nauczyciele AS n ON n.nauczyciel_id=k.nauczyciel_id
 WHERE k.poziom=4 AND n.nazwisko='Nowak';
-
+```
 
 
 
