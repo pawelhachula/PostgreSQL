@@ -1,11 +1,11 @@
-# **Variant 2**
+# **Version 2**
 
 
 
 
 ## Project of database
 
-![Variant 2](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%202/Relacje_zad_2.png)
+![Version 2](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%202/Relacje_zad_2.png)
 
 
 ## DB creation and data entry

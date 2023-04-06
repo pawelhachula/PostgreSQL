@@ -2,7 +2,7 @@
 
 ## Project description
 
-In this repository I present my database creation project with using SQL. The project consists task from the "Databases, SQL for testers and analysts" course.
+In this repository, I present my database creation project using SQL. The project consists task from the "Databases, SQL for testers and analysts" course.
 
 Used technologies and tools - PostrgreSQL and SQL.
  
@@ -19,6 +19,6 @@ Design 3 tables: **uczniowie, nauczyciele, klasy**. Fill them with sample data -
 
 I created 2 versions of the task solution.
 
-Version 1 is available **HERE**
+Version 1 is available **[HERE]()**
 
 Version 2 is available **HERE**
