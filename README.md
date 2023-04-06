@@ -19,6 +19,6 @@ Design 3 tables: **uczniowie, nauczyciele, klasy**. Fill them with sample data -
 
 I created 2 versions of the task solution.
 
-Version 1 is available **[HERE]()**
+Version 1 is available **[HERE](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%201/README_1.md)**
 
-Version 2 is available **HERE**
+Version 2 is available **[HERE](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%202/README_2.md)**

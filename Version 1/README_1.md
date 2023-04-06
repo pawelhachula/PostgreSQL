@@ -5,7 +5,7 @@
 
 ## Project of database
 
-![Version 1](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%201/Relacje_zad_1.png)
+![Version 1](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%201/DB_project_1.png)
 
 
 ## DB creation and data entry
@@ -89,4 +89,4 @@ WHERE k.poziom=4 AND n.nazwisko='Nowak';
 
 ## Solution
 
-![Solution](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%201/Rozwiazanie_1.png)
+![Solution](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%201/Solution_1.png)
