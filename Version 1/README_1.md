@@ -76,6 +76,7 @@ INSERT INTO uczniowie VALUES (16,'Maciej','Maciejewski',TRUE,'2014-02-11',2);
 INSERT INTO uczniowie VALUES (17,'Jakub','Jakubowski',TRUE,'2015-10-21',1);
 INSERT INTO uczniowie VALUES (18,'Irena','Irenka',TRUE,'2015-04-27',1);
 INSERT INTO uczniowie VALUES (19,'Michal','Michalowski',TRUE,'2015-07-26',1);
+
  
 
 ## SQL query
