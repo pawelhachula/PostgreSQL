@@ -1,0 +1,95 @@
+# **Variant 2**
+
+
+
+
+## Project of database
+
+![Variant 2](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%202/Relacje_zad_2.png)
+
+
+## DB creation and data entry
+
+CREATE TABLE nauczyciele(
+nauczyciel_id INT PRIMARY KEY,
+imie VARCHAR(50) NOT NULL,
+nazwisko VARCHAR(100) NOT NULL,
+numer_telefonu VARCHAR(50) NOT NULL,
+data_zatrudnienia DATE,
+specjalizacja VARCHAR(100)
+);
+
+INSERT INTO nauczyciele VALUES (1, 'Zdzislaw', 'Zdzichowski', '606-222-548', '2004-01-24', 'fizyka');
+INSERT INTO nauczyciele VALUES (2, 'Antoni', 'Antonik', '604-242-001', '2005-11-24', 'matematyka');
+INSERT INTO nauczyciele VALUES (3, 'Dariusz', 'Darecki', '532-254-118', '2006-02-14', 'chemia');
+INSERT INTO nauczyciele VALUES (4, 'Zdzislawa', 'Zdzichowska', '607-202-543', '2006-07-20', 'biologia');
+INSERT INTO nauczyciele VALUES (5, 'Ryszard', 'Rychowski', '504-122-548', '2007-09-26', 'geografia');
+INSERT INTO nauczyciele VALUES (6, 'Wojciech', 'Wojciechowski', '606-002-500', '2008-03-08', 'j.polski');
+INSERT INTO nauczyciele VALUES (7, 'Anna', 'Annowska', '601-200-508', '2010-06-06', 'j.angielski');
+INSERT INTO nauczyciele VALUES (8, 'Anita', 'Nowak', '500-777-598', '2011-01-24', 'j.niemiecki');
+INSERT INTO nauczyciele VALUES (9, 'Łukasz', 'Łukaszewicz', '502-767-400', '2018-07-01', 'wf');
+INSERT INTO nauczyciele VALUES (10, 'Kamila', 'Kamiluk', '505-732-998', '2021-01-22', 'geografia');
+
+
+
+CREATE TABLE klasa(
+klasa_id INT PRIMARY KEY,
+poziom INT NOT NULL,
+nazwa VARCHAR(100) NOT NULL,
+ilosc_uczniow INT NOT NULL,
+dofinansowanie_ue BOOLEAN NOT NULL,
+przydzielona_sala INT NOT NULL
+);
+
+INSERT INTO klasa VALUES (1,1,'pierwsza',3,TRUE,31);
+INSERT INTO klasa VALUES (2,2,'druga',3,TRUE,16);
+INSERT INTO klasa VALUES (3,3,'trzecia',3,TRUE,21);
+INSERT INTO klasa VALUES (4,4,'czwarta',4,FALSE,18);
+INSERT INTO klasa VALUES (5,5,'piata',3,FALSE,14);
+INSERT INTO klasa VALUES (6,6,'szosta',3,FALSE,11);
+
+CREATE TABLE uczniowie(
+uczen_id INT PRIMARY KEY,
+imie VARCHAR(50) NOT NULL,
+nazwisko VARCHAR(100) NOT NULL,
+obywatelstwo_polskie BOOLEAN NOT NULL,
+data_urodzenia DATE NOT NULL,
+klasa_id INT NOT NULL,
+nauczyciel_id INT NOT NULL,
+FOREIGN KEY (klasa_id) REFERENCES klasa(klasa_id),
+FOREIGN KEY (nauczyciel_id) REFERENCES nauczyciele(nauczyciel_id)
+);
+
+INSERT INTO uczniowie VALUES (1,'Brajan','Brajaniuk',TRUE,'2010-08-08',6,1);
+INSERT INTO uczniowie VALUES (2,'Karina','Karin',TRUE,'2010-02-03',6,1);
+INSERT INTO uczniowie VALUES (3,'Brajan','Kowalski',TRUE,'2010-09-01',6,2);
+INSERT INTO uczniowie VALUES (4,'Jessica','Jones',FALSE,'2011-07-11',5,2);
+INSERT INTO uczniowie VALUES (5,'Ahmed','Zielinski',TRUE,'2011-08-08',5,3);
+INSERT INTO uczniowie VALUES (6,'Marek','Marecki',TRUE,'2011-01-18',5,3);
+INSERT INTO uczniowie VALUES (7,'Pawel','Pawlowski',TRUE,'2012-03-04',4,8);
+INSERT INTO uczniowie VALUES (8,'Magdalena','Magdziarz',TRUE,'2012-10-21',4,8);
+INSERT INTO uczniowie VALUES (9,'Gabriel','Golebewski',TRUE,'2012-12-22',4,4);
+INSERT INTO uczniowie VALUES (10,'Czeslaw','Czechowski',TRUE,'2012-05-04',4,4);
+INSERT INTO uczniowie VALUES (11,'Andriey','Andriyevich',FALSE,'2013-10-23',3,5);
+INSERT INTO uczniowie VALUES (12,'Ludwik','Ludwiszewski',TRUE,'2013-10-01',3,5);
+INSERT INTO uczniowie VALUES (13,'Henryk','Henryczak',TRUE,'2013-05-02',3,6);
+INSERT INTO uczniowie VALUES (14,'Matthias','Schmidt',FALSE,'2014-11-11',2,6);
+INSERT INTO uczniowie VALUES (15,'Iwona','Iwanczuk',TRUE,'2014-12-12',2,7);
+INSERT INTO uczniowie VALUES (16,'Maciej','Maciejewski',TRUE,'2014-02-11',2,7);
+INSERT INTO uczniowie VALUES (17,'Jakub','Jakubowski',TRUE,'2015-10-21',1,8);
+INSERT INTO uczniowie VALUES (18,'Irena','Irenka',TRUE,'2015-04-27',1,8);
+INSERT INTO uczniowie VALUES (19,'Michal','Michalowski',TRUE,'2015-07-26',1,8);
+ 
+
+## SQL query
+
+SELECT u.imie|| ' ' || u.nazwisko AS imie_i_nazwisko_uczniow 
+FROM uczniowie AS u 
+JOIN klasa AS k ON u.klasa_id=k.klasa_id 
+JOIN nauczyciele AS n ON u.nauczyciel_id=n.nauczyciel_id 
+WHERE k.poziom=4 AND n.nazwisko='Nowak';
+
+
+## Solution
+
+![Solution](https://github.com/pawelhachula/PostgreSQL/blob/main/Exercise%204/Variant%202/Rozwiazanie_2.png)
