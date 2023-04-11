@@ -4,7 +4,7 @@
 
 In this repository, I present my database creation project using SQL. The project consists task from the "Databases, SQL for testers and analysts" course.
 
-Used technologies and tools - PostrgreSQL and SQL.
+Used technologies and tools - PostgreSQL and SQL.
  
 The project was translated into English, but some names remained in Polish. 
 

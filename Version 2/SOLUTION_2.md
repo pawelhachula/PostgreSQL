@@ -90,6 +90,6 @@ JOIN nauczyciele AS n ON u.nauczyciel_id=n.nauczyciel_id
 WHERE k.poziom=4 AND n.nazwisko='Nowak';
 ```
 
-## Solution
+## Result
 
-![Solution](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%202/Solution_2.png)
+![Result](https://github.com/pawelhachula/PostgreSQL/blob/main/Version%202/Result_2.png)
